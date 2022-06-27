@@ -1,8 +1,10 @@
+import logo from '../assets/logo.png'
+
 function Header() {
     return (
         <header className="flex-between">
             <div>
-                <a>logo</a>
+                <img src={logo} alt="OCP logo"></img>
                 Omni Consumer Products</div>
             <nav className="flex">
                 <div>About</div>

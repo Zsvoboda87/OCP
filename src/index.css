@@ -14,10 +14,18 @@ code {
 
 .flex {
   display: flex;
-  
 }
 
 .flex-between {
   display: flex;
   justify-content: space-between;
+}
+
+header {
+  height: 100px;
+  background-color: black;
+  padding: 0 25px;
+  
+  display: flex;
+  align-items: center;
 }
