@@ -22,7 +22,7 @@ function SlideDeck(props) {
                     />
                     <Carousel.Caption>
                         <h3 className="slide-title">{slide.title}</h3>
-                        <p>{slide.content}</p>
+                        <p className='carousel-content'>{slide.content}</p>
                         <Button className="slide-button" variant="warning">LEARN MORE</Button>
                     </Carousel.Caption>
                 </Carousel.Item>

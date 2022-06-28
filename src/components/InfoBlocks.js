@@ -10,8 +10,8 @@ function InfoBlocks(props) {
     const iBlocks = infoBlocks.info_blocks
     console.log(iBlocks)
     return (
-        <Container >
-            <Row className="pt1">
+        <Container id="info-container" className="mt3">
+            <Row className="">
                 {
                     iBlocks.map(block => (
 

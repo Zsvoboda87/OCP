@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import SlideDeck from './components/Carousel';
 import Header from './components/Header'
+import InfoBlocks from './components/InfoBlocks';
+import Register from './components/Register'
+import Footer from './components/Footer';
 
 import { useEffect, useState } from 'react';
-import InfoBlocks from './components/InfoBlocks';
 
 function App() {
   const [error, setError] = useState(null);
@@ -45,6 +47,8 @@ function App() {
         <Header />
         <SlideDeck slides={items} />
         <InfoBlocks infoBlocks={items} />
+        <Register />
+        <Footer />
       </>
     );
   }

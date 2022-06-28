@@ -1,16 +1,14 @@
 :root{
   --primary-color: white;
   --secondary-color:black;
-  /* --tertiary-color: #4A2445;
-  --accent-color: #824c71; */
+  --tertiary-color: #5c5c5c;
+  --accent-color: #FFA900;
 }
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,6 +16,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+p {
+  padding-bottom: 2%;
+  color: var(--tertiary-color)
 }
 
 .flex {
@@ -33,9 +40,19 @@ code {
   justify-content: space-between;
 }
 
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+.margin-auto {
+ width: 100%;
+  margin: auto 0
 }
 
 header {
@@ -52,6 +69,9 @@ header {
   margin: 0 15px;
 }
 
+.carousel {
+  margin-bottom: 8vh
+}
 .car-item {
  height: 60vh;
 }
@@ -61,11 +81,15 @@ header {
 }
 
 .carousel-caption {
-  background-color: black;
+  background: rgba(0, 0, 0, 0.6);
   width: 100vw;
   right: 0%;
   left: 0%;
+}
 
+.carousel-content {
+ color:var(--primary-color);
+ font-size: 1.2rem
 }
 
 .slide-title {
@@ -73,8 +97,7 @@ font-weight: bold ;
 opacity: 100%;
 }
 
-.slide-button {
-  
+.btn {
   font-weight: bold ;
 }
 
@@ -82,3 +105,34 @@ opacity: 100%;
   color: #FFA900;
   font-size: 30px ;
 }
+
+#info-container {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 8vh;
+}
+
+#reg-paragraph {
+  font-size: 1.2rem;
+}
+
+footer {
+  margin-top: 5vh;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color)
+}
+
+.list-header {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+li {
+  list-style: none
+}
+
+.trademark {
+  color: #FFA900;
+  font-size: 1.3rem;
+}
+
