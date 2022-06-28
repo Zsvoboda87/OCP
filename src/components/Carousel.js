@@ -1,46 +1,32 @@
 import { Carousel } from 'react-bootstrap';
-import slide1 from '../assets/slide1.jpg'
-import slide2 from '../assets/slide2.jpg'
-import slide3 from '../assets/slide3.jpg'
+import { Button } from 'react-bootstrap'
 
-function SlideDeck() {
+
+function SlideDeck(props) {
+
+    const {
+        slides
+    } = props;
+
+    const cSlides = slides.carousel_slides
+
     return (
-        <Carousel fade>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={slide1}
-                    alt="First slide"
-                />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={slide2}
-                    alt="Second slide"
-                />
+        <Carousel fade >
+            {cSlides.map(slide => (
+                <Carousel.Item className="car-item">
+                    <img
+                        className="d-block w-100"
+                        src={slide.image}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 className="slide-title">{slide.title}</h3>
+                        <p>{slide.content}</p>
+                        <Button className="slide-button" variant="warning">LEARN MORE</Button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))}
 
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={slide3}
-                    alt="Third slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
         </Carousel>
 
     )

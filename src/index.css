@@ -46,3 +46,30 @@ header {
 .nav-item {
   margin: 0 15px;
 }
+
+.car-item {
+ height: 60vh;
+}
+
+.carousel-indicators {
+ opacity: 0;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  right: 0%;
+  left: 0%;
+
+}
+
+.slide-title {
+font-weight: bold ;
+opacity: 100%;
+}
+
+.slide-button {
+  
+  font-weight: bold ;
+}
+
