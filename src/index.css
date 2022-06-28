@@ -5,7 +5,6 @@
   --accent-color: #FFA900;
 }
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
@@ -25,6 +24,11 @@ h1, h2, h3, h4, h5, h6 {
 p {
   padding-bottom: 2%;
   color: var(--tertiary-color)
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color)
 }
 
 .flex {
@@ -66,8 +70,13 @@ header {
   align-items: center;
 }
 
-.nav-item {
+.nav-item, .omni {
   margin: 0 15px;
+}
+
+.nav-item:hover {
+  color: var(--accent-color);
+  cursor:pointer
 }
 
 .carousel {
