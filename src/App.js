@@ -5,6 +5,7 @@ import SlideDeck from './components/Carousel';
 import Header from './components/Header'
 
 import { useEffect, useState } from 'react';
+import InfoBlocks from './components/InfoBlocks';
 
 function App() {
   const [error, setError] = useState(null);
@@ -26,9 +27,6 @@ function App() {
         setIsLoaded(true);
         setItems(result);
       },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setIsLoaded(true);
           setError(error);
@@ -46,6 +44,7 @@ function App() {
       <>
         <Header />
         <SlideDeck slides={items} />
+        <InfoBlocks infoBlocks={items} />
       </>
     );
   }
