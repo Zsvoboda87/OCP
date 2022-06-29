@@ -31,6 +31,10 @@ a {
   color: var(--primary-color)
 }
 
+a:hover {
+  color: var(--accent-color)
+}
+
 .flex {
   display: flex;
 }
@@ -146,3 +150,23 @@ li {
   font-size: 1.3rem;
 }
 
+.rform {
+  width: 80vw;
+  padding: 5rem
+}
+
+.reg-form {
+  width: 100vw
+}
+
+#passwordHelpBlock {
+  color: #cb8905;
+  font-style: italic;
+}
+
+.mt1 {
+  margin-top: 1rem
+}
+.mb1 {
+  margin-bottom: 1rem
+}

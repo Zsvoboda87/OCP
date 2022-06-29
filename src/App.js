@@ -18,7 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/register" component={RegisterForm} />
+          <Route exact path="/register" element={<RegisterForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>
