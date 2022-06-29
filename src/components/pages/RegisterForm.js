@@ -40,8 +40,6 @@ function RegisterForm() {
 
     };
 
-    console.log(formState)
-
     const handleFormSubmit = async event => {
         event.preventDefault();
         navigate("/regcomplete")

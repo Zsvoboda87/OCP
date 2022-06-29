@@ -8,7 +8,7 @@ function InfoBlocks(props) {
     } = props;
 
     const iBlocks = infoBlocks.info_blocks
-    console.log(iBlocks)
+
     return (
         <Container id="info-container" className="mt3">
             <Row className="">

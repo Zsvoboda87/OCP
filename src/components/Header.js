@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <header className="flex-between">
+        <header className="flex-between ocp-header">
             <Link to={'/'}>
                 <div className="flex align-center">
                     <img src={logo} alt="OCP logo"></img>
@@ -12,7 +12,7 @@ function Header() {
                     </h1>
                 </div>
             </Link>
-            <nav className="flex">
+            <nav className="flex ">
                 <div className="nav-item">About</div>
                 <div className="nav-item">Products</div>
                 <Link to={'/register'}>

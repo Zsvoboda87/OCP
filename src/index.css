@@ -178,3 +178,38 @@ li {
 .thanks {
   font-weight: normal;
 }
+
+
+@media screen and (max-width: 900px) {
+  header h1{
+    font-size: 1.5rem;
+  }
+ }
+
+ @media screen and (max-width: 770px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header img{
+    width: 4vw
+  }
+  
+  .ocp-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .car-item {
+    height: 40vh;
+   }
+
+ }
+
+ @media screen and (max-width: 445px) {
+  header h1{
+    font-size: 1.03rem;
+  }
+ 
+}
