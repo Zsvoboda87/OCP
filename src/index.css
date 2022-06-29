@@ -17,6 +17,8 @@ code {
     monospace;
 }
 
+/* Style for HTML elements */
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
@@ -34,6 +36,8 @@ a {
 a:hover {
   color: var(--accent-color)
 }
+
+/* Utility Classes for layout */
 
 .flex {
   display: flex;
@@ -64,6 +68,19 @@ a:hover {
   margin: auto 0
 }
 
+.mt1 {
+  margin-top: 1rem
+}
+
+.mt3 {
+  margin-top: 2rem
+}
+.mb1 {
+  margin-bottom: 1rem
+}
+
+/* Styling for Header */
+
 header {
   height: 120px;
   background-color: var(--secondary-color);
@@ -82,6 +99,8 @@ header {
   color: var(--accent-color);
   cursor:pointer
 }
+
+/* Styling for Carousel/Slide Deck */
 
 .carousel {
   margin-bottom: 8vh
@@ -115,6 +134,8 @@ opacity: 100%;
   font-weight: bold ;
 }
 
+/* Styling for Info Blocks */
+
 .seperator {
   color: #FFA900;
   font-size: 30px ;
@@ -128,6 +149,8 @@ opacity: 100%;
 #reg-paragraph {
   font-size: 1.2rem;
 }
+
+/* Styling for Footer*/
 
 footer {
   margin-top: 5vh;
@@ -150,6 +173,8 @@ li {
   font-size: 1.3rem;
 }
 
+/* Styling for Registration Form */
+
 .rform {
   width: 80vw;
   padding: 5rem
@@ -164,21 +189,13 @@ li {
   font-style: italic;
 }
 
-.mt1 {
-  margin-top: 1rem
-}
-
-.mt3 {
-  margin-top: 2rem
-}
-.mb1 {
-  margin-bottom: 1rem
-}
+/* Styling for Registration Thank You*/
 
 .thanks {
   font-weight: normal;
 }
 
+/* Media Queries for different screen sizes */
 
 @media screen and (max-width: 900px) {
   header h1{
