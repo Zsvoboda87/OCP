@@ -1,5 +1,6 @@
 import { Form, Button, Col, Row } from 'react-bootstrap'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 function validateEmail(email) {
@@ -9,6 +10,8 @@ function validateEmail(email) {
 
 
 function RegisterForm() {
+    let navigate = useNavigate()
+
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -32,20 +35,6 @@ function RegisterForm() {
                 }
             }
         }
-        // if (e.target.name === 'date') {
-        //     const isPasswordValid = checkPassword(e.target.value);
-        //     console.log(e.target.value);
-        //     if (!isPasswordValid) {
-        //         setErrorMessage('Your password needs to be at least 8 characters and contain an uppercase letter and number.');
-        //     } else {
-        //         if (!e.target.value.length) {
-        //             setErrorMessage(`${e.target.name} is required.`);
-        //         } else {
-        //             setErrorMessage('');
-        //         }
-        //     }
-        // }
-
         setFormState({ ...formState, [e.target.name]: e.target.value })
 
 
@@ -55,8 +44,9 @@ function RegisterForm() {
 
     const handleFormSubmit = async event => {
         event.preventDefault();
+        navigate("/regcomplete")
         const responseData =
-            await fetch("http://localhost:8080/https://challenge-api.codered.cloud/api/v1/register", {
+            await fetch("http://localhost:8080/https://challenge-api.codered.cloud/api/v1/register/", {
                 method: "post",
                 body: formState,
                 mode: 'cors',
@@ -66,8 +56,6 @@ function RegisterForm() {
             })
         console.log(responseData)
     }
-
-
 
 
 
@@ -118,7 +106,7 @@ function RegisterForm() {
                                 onChange={handleChange}
                             />
                             <Form.Text id="passwordHelpBlock" >
-                                Must be 18 years or older.
+                                Must be 18 years or older. (YYYY-MM-DD)
                             </Form.Text>
                         </Col>
                     </Row>

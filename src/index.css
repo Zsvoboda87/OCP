@@ -167,6 +167,14 @@ li {
 .mt1 {
   margin-top: 1rem
 }
+
+.mt3 {
+  margin-top: 2rem
+}
 .mb1 {
   margin-bottom: 1rem
+}
+
+.thanks {
+  font-weight: normal;
 }

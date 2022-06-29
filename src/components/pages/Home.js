@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import SlideDeck from '../Carousel';
 import InfoBlocks from '../InfoBlocks';
 import Register from '../Register';
+import Footer from '../Footer';
 
 
 function Home() {
@@ -43,6 +44,7 @@ function Home() {
                 <SlideDeck slides={items} />
                 <InfoBlocks infoBlocks={items} />
                 <Register></Register>
+                <Footer />
             </>
         );
     }
