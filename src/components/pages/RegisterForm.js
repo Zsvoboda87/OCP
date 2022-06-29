@@ -9,6 +9,8 @@ function validateEmail(email) {
 }
 
 
+
+
 function RegisterForm() {
     let navigate = useNavigate()
 
@@ -42,18 +44,24 @@ function RegisterForm() {
 
     const handleFormSubmit = async event => {
         event.preventDefault();
-        navigate("/regcomplete")
+
         const responseData =
-            await fetch("http://localhost:8080/https://challenge-api.codered.cloud/api/v1/register/", {
-                method: "post",
+
+            await fetch("https://challenge-api.codered.cloud/api/v1/register/", {
+                method: "POST",
+                mode: "no-cors",
                 body: formState,
-                mode: 'cors',
                 headers: {
-                    'origin': 'https://challenge-api.codered.cloud'
-                }
+                    'Content-Type': 'application/json'
+                },
+
             })
         console.log(responseData)
+        navigate("/regcomplete")
+
+
     }
+
 
 
 

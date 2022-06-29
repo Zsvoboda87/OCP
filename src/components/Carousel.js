@@ -14,7 +14,7 @@ function SlideDeck(props) {
     return (
         <Carousel fade >
             {cSlides.map(slide => (
-                <Carousel.Item className="car-item">
+                <Carousel.Item key={slide.title} className="car-item">
                     <img
                         className="d-block w-100"
                         src={slide.image}

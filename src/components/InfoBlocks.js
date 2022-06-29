@@ -15,7 +15,7 @@ function InfoBlocks(props) {
                 {
                     iBlocks.map(block => (
 
-                        <Col xs={12} sm={6} md={3}>
+                        <Col key={block.title} xs={12} sm={6} md={3}>
                             <h4 className="flex-center">{block.title}</h4>
                             <div className="flex-center seperator">_______</div>
                             <p>{block.content}</p>
