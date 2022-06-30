@@ -2,14 +2,10 @@ import { Form, Button, Col, Row } from 'react-bootstrap'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-
-
-
 
 function RegisterForm() {
     let navigate = useNavigate()
@@ -19,8 +15,6 @@ function RegisterForm() {
         email: '',
         date_of_birth: '',
     })
-
-
     const [errorMessage, setErrorMessage] = useState("We'll never share your email with anyone else.");
 
     const handleChange = (e) => {
@@ -38,18 +32,19 @@ function RegisterForm() {
             }
         }
         setFormState({ ...formState, [e.target.name]: e.target.value })
-
-
     };
 
     const handleFormSubmit = async event => {
         event.preventDefault();
-
+        let regrequest = JSON.stringify(formState);
+        console.log(regrequest)
         const responseData =
+
+
 
             await fetch("https://challenge-api.codered.cloud/api/v1/register/", {
                 method: "POST",
-                mode: "no-cors",
+                mode: "cors",
                 body: formState,
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,12 +53,7 @@ function RegisterForm() {
             })
         console.log(responseData)
         navigate("/regcomplete")
-
-
     }
-
-
-
 
     return (
         <>

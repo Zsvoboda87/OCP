@@ -1,7 +1,6 @@
 import { Form, Row } from 'react-bootstrap'
 
 function RegComplete() {
-
     return (
         <div className='flex-center reg-form'>
             <Form className='rform'>
@@ -17,6 +16,5 @@ function RegComplete() {
         </div>
     )
 }
-
 
 export default RegComplete
